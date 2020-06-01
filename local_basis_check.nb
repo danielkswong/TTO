@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     40283,       1172]
-NotebookOptionsPosition[     39778,       1150]
-NotebookOutlinePosition[     40154,       1166]
-CellTagsIndexPosition[     40111,       1163]
+NotebookDataLength[     49523,       1405]
+NotebookOptionsPosition[     48936,       1381]
+NotebookOutlinePosition[     49312,       1397]
+CellTagsIndexPosition[     49269,       1394]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -22,17 +22,23 @@ Cell[BoxData[
  RowBox[{"(*", " ", 
   RowBox[{
    RowBox[{
-   "Determines", " ", "the", " ", "Hdd", " ", "in", " ", "terms", " ", "of", 
-    " ", "the", " ", "exchange", " ", "terms", " ", "X1"}], ",", " ", "X2", 
-   ",", " ", "X3", ",", " ", 
+   "Determines", " ", "the", " ", "Hex", " ", "and", " ", "Hdd", " ", "in", 
+    " ", "terms", " ", "of", " ", "the", " ", "exchange", " ", "terms", " ", 
+    "X1"}], ",", " ", "X2", ",", " ", "X3", ",", " ", 
    RowBox[{"and", " ", "X4"}]}], " ", "*)"}]], "Input",
- CellChangeTimes->{{3.7995444884375515`*^9, 3.7995445131124086`*^9}}],
+ CellChangeTimes->{{3.7995444884375515`*^9, 3.7995445131124086`*^9}, {
+  3.7999690065395083`*^9, 3.7999690100672083`*^9}}],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{
-  RowBox[{"(*", " ", "Curnoe", " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{"Curnoe", " ", 
+    RowBox[{"doi", ":", 
+     RowBox[{
+      RowBox[{"10.1103", "/", "PhysRevB"}], ".90", ".214404"}]}]}], "*)"}], 
+  "\[IndentingNewLine]", 
   RowBox[{
    RowBox[{
     RowBox[{"r1", "=", 
@@ -191,6 +197,96 @@ Cell[BoxData[
         RowBox[{"J4x", ",", "J4y", ",", "J4z"}], "}"}]}], "}"}]}], ";"}], 
    "\[IndentingNewLine]", 
    RowBox[{
+    RowBox[{"HexCurnoe", "=", 
+     RowBox[{"\[ScriptCapitalJ]", "*", 
+      RowBox[{"Sum", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"KroneckerDelta", "[", 
+          RowBox[{"\[Alpha]1", ",", "\[Beta]1"}], "]"}], "*", 
+         RowBox[{"u", "\[LeftDoubleBracket]", 
+          RowBox[{"a", ",", "\[Alpha]1", ",", "\[Alpha]2"}], 
+          "\[RightDoubleBracket]"}], "*", 
+         RowBox[{"u", "\[LeftDoubleBracket]", 
+          RowBox[{"b", ",", "\[Beta]1", ",", "\[Beta]2"}], 
+          "\[RightDoubleBracket]"}], "*", 
+         RowBox[{"Js", "\[LeftDoubleBracket]", 
+          RowBox[{"a", ",", "\[Alpha]2"}], "\[RightDoubleBracket]"}], "*", 
+         RowBox[{"Js", "\[LeftDoubleBracket]", 
+          RowBox[{"b", ",", "\[Beta]2"}], "\[RightDoubleBracket]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"a", ",", "3"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"b", ",", 
+          RowBox[{"a", "+", "1"}], ",", "4"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"\[Alpha]1", ",", "3"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"\[Alpha]2", ",", "3"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"\[Beta]1", ",", "3"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"\[Beta]2", ",", "3"}], "}"}]}], "]"}]}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"HexCurnoe", "=", 
+     RowBox[{"HexCurnoe", "/.", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"J1x", "\[Rule]", 
+         RowBox[{
+          RowBox[{"1", "/", "2"}], "*", 
+          RowBox[{"(", 
+           RowBox[{"J1p", "+", "J1m"}], ")"}]}]}], ",", 
+        RowBox[{"J2x", "\[Rule]", 
+         RowBox[{
+          RowBox[{"1", "/", "2"}], "*", 
+          RowBox[{"(", 
+           RowBox[{"J2p", "+", "J2m"}], ")"}]}]}], ",", 
+        RowBox[{"J3x", "\[Rule]", 
+         RowBox[{
+          RowBox[{"1", "/", "2"}], "*", 
+          RowBox[{"(", 
+           RowBox[{"J3p", "+", "J3m"}], ")"}]}]}], ",", 
+        RowBox[{"J4x", "\[Rule]", 
+         RowBox[{
+          RowBox[{"1", "/", "2"}], "*", 
+          RowBox[{"(", 
+           RowBox[{"J4p", "+", "J4m"}], ")"}]}]}], ",", 
+        RowBox[{"J1y", "\[Rule]", 
+         RowBox[{
+          RowBox[{"1", "/", 
+           RowBox[{"(", 
+            RowBox[{"2", "*", "I"}], ")"}]}], "*", 
+          RowBox[{"(", 
+           RowBox[{"J1p", "-", "J1m"}], ")"}]}]}], ",", 
+        RowBox[{"J2y", "\[Rule]", 
+         RowBox[{
+          RowBox[{"1", "/", 
+           RowBox[{"(", 
+            RowBox[{"2", "*", "I"}], ")"}]}], "*", 
+          RowBox[{"(", 
+           RowBox[{"J2p", "-", "J2m"}], ")"}]}]}], ",", 
+        RowBox[{"J3y", "\[Rule]", 
+         RowBox[{
+          RowBox[{"1", "/", 
+           RowBox[{"(", 
+            RowBox[{"2", "*", "I"}], ")"}]}], "*", 
+          RowBox[{"(", 
+           RowBox[{"J3p", "-", "J3m"}], ")"}]}]}], ",", 
+        RowBox[{"J4y", "\[Rule]", 
+         RowBox[{
+          RowBox[{"1", "/", 
+           RowBox[{"(", 
+            RowBox[{"2", "*", "I"}], ")"}]}], "*", 
+          RowBox[{"(", 
+           RowBox[{"J4p", "-", "J4m"}], ")"}]}]}]}], "}"}]}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"HexCurnoe", "=", 
+     RowBox[{"ExpandAll", "[", "HexCurnoe", "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
     RowBox[{"HddCurnoe", "=", 
      RowBox[{"\[ScriptCapitalD]", "*", 
       RowBox[{"Sum", "[", 
@@ -296,8 +392,8 @@ Cell[BoxData[
    "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"HddCurnoe", "=", 
-     RowBox[{"ExpandAll", "[", "HddCurnoe", "]"}]}], ";"}], "\n", 
-   "\[IndentingNewLine]", 
+     RowBox[{"ExpandAll", "[", "HddCurnoe", "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\n", 
    RowBox[{
     RowBox[{"X1Curnoe", "=", 
      RowBox[{"X2Curnoe", "=", 
@@ -385,156 +481,164 @@ Cell[BoxData[
           FontWeight->"Bold"], ",", "1", ",", "0"}], "}"}]}], "}"}]}], ";"}], 
    "\[IndentingNewLine]", 
    RowBox[{
-    RowBox[{"Do", "[", 
-     RowBox[{
+    RowBox[{"X1Curnoe", "=", 
+     RowBox[{"Sum", "[", 
       RowBox[{
-       RowBox[{"X1Curnoe", "+=", 
+       RowBox[{
         RowBox[{
-         RowBox[{
-          RowBox[{"-", "1"}], "/", "3"}], "*", 
-         RowBox[{
-         "jzList", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], 
-         "*", 
-         RowBox[{
-         "jzList", "\[LeftDoubleBracket]", "j", "\[RightDoubleBracket]"}]}]}],
-        ";"}], ",", 
-      RowBox[{"{", 
-       RowBox[{"i", ",", "3"}], "}"}], ",", 
-      RowBox[{"{", 
-       RowBox[{"j", ",", 
-        RowBox[{"i", "+", "1"}], ",", "4"}], "}"}]}], "]"}], ";"}], 
+         RowBox[{"-", "1"}], "/", "3"}], "*", 
+        RowBox[{
+        "jzList", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], "*", 
+        RowBox[{
+        "jzList", "\[LeftDoubleBracket]", "j", "\[RightDoubleBracket]"}]}], 
+       ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "3"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"j", ",", 
+         RowBox[{"i", "+", "1"}], ",", "4"}], "}"}]}], "]"}]}], ";"}], 
    "\[IndentingNewLine]", 
    RowBox[{
-    RowBox[{"Do", "[", 
-     RowBox[{
+    RowBox[{"X2Curnoe", "=", 
+     RowBox[{"Sum", "[", 
       RowBox[{
-       RowBox[{"X2Curnoe", "+=", 
+       RowBox[{
         RowBox[{
+         RowBox[{"-", 
+          RowBox[{"\[Sqrt]", "2"}]}], "/", "3"}], "*", 
+        RowBox[{"(", 
          RowBox[{
-          RowBox[{"-", 
-           RowBox[{"\[Sqrt]", "2"}]}], "/", "3"}], "*", 
-         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+            "lambda", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], 
+            "\[LeftDoubleBracket]", "j", "\[RightDoubleBracket]"}], "*", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{
+              "jzList", "\[LeftDoubleBracket]", "i", 
+               "\[RightDoubleBracket]"}], "*", 
+              RowBox[{
+              "jpList", "\[LeftDoubleBracket]", "j", 
+               "\[RightDoubleBracket]"}]}], "+", 
+             RowBox[{
+              RowBox[{
+              "jpList", "\[LeftDoubleBracket]", "i", 
+               "\[RightDoubleBracket]"}], "*", 
+              RowBox[{
+              "jzList", "\[LeftDoubleBracket]", "j", 
+               "\[RightDoubleBracket]"}]}]}], ")"}]}], "+", 
           RowBox[{
            RowBox[{
             RowBox[{
              RowBox[{
              "lambda", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}],
-              "\[LeftDoubleBracket]", "j", "\[RightDoubleBracket]"}], "*", 
-            RowBox[{"(", 
-             RowBox[{
-              RowBox[{
-               RowBox[{
-               "jzList", "\[LeftDoubleBracket]", "i", 
-                "\[RightDoubleBracket]"}], "*", 
-               RowBox[{
-               "jpList", "\[LeftDoubleBracket]", "j", 
-                "\[RightDoubleBracket]"}]}], "+", 
-              RowBox[{
-               RowBox[{
-               "jpList", "\[LeftDoubleBracket]", "i", 
-                "\[RightDoubleBracket]"}], "*", 
-               RowBox[{
-               "jzList", "\[LeftDoubleBracket]", "j", 
-                "\[RightDoubleBracket]"}]}]}], ")"}]}], "+", 
-           RowBox[{
+              "\[LeftDoubleBracket]", "j", "\[RightDoubleBracket]"}], 
+            "\[Conjugate]"}], "*", 
+           RowBox[{"(", 
             RowBox[{
              RowBox[{
               RowBox[{
-              "lambda", "\[LeftDoubleBracket]", "i", 
-               "\[RightDoubleBracket]"}], "\[LeftDoubleBracket]", "j", 
-              "\[RightDoubleBracket]"}], "\[Conjugate]"}], "*", 
-            RowBox[{"(", 
+              "jzList", "\[LeftDoubleBracket]", "i", 
+               "\[RightDoubleBracket]"}], "*", 
+              RowBox[{
+              "jmList", "\[LeftDoubleBracket]", "j", 
+               "\[RightDoubleBracket]"}]}], "+", 
              RowBox[{
               RowBox[{
-               RowBox[{
-               "jzList", "\[LeftDoubleBracket]", "i", 
-                "\[RightDoubleBracket]"}], "*", 
-               RowBox[{
-               "jmList", "\[LeftDoubleBracket]", "j", 
-                "\[RightDoubleBracket]"}]}], "+", 
+              "jmList", "\[LeftDoubleBracket]", "i", 
+               "\[RightDoubleBracket]"}], "*", 
               RowBox[{
-               RowBox[{
-               "jmList", "\[LeftDoubleBracket]", "i", 
-                "\[RightDoubleBracket]"}], "*", 
-               RowBox[{
-               "jzList", "\[LeftDoubleBracket]", "j", 
-                "\[RightDoubleBracket]"}]}]}], ")"}]}]}], ")"}]}]}], ";"}], 
-      ",", 
-      RowBox[{"{", 
-       RowBox[{"i", ",", "3"}], "}"}], ",", 
-      RowBox[{"{", 
-       RowBox[{"j", ",", 
-        RowBox[{"i", "+", "1"}], ",", "4"}], "}"}]}], "]"}], ";"}], 
+              "jzList", "\[LeftDoubleBracket]", "j", 
+               "\[RightDoubleBracket]"}]}]}], ")"}]}]}], ")"}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "3"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"j", ",", 
+         RowBox[{"i", "+", "1"}], ",", "4"}], "}"}]}], "]"}]}], ";"}], 
    "\[IndentingNewLine]", 
    RowBox[{
-    RowBox[{"Do", "[", 
-     RowBox[{
+    RowBox[{"X3Curnoe", "=", 
+     RowBox[{"Sum", "[", 
       RowBox[{
-       RowBox[{"X3Curnoe", "+=", 
-        RowBox[{
-         RowBox[{"1", "/", "3"}], "*", 
-         RowBox[{"(", 
+       RowBox[{
+        RowBox[{"1", "/", "3"}], "*", 
+        RowBox[{"(", 
+         RowBox[{
           RowBox[{
-           RowBox[{
-            RowBox[{
-             RowBox[{
-              RowBox[{
-              "lambda", "\[LeftDoubleBracket]", "i", 
-               "\[RightDoubleBracket]"}], "\[LeftDoubleBracket]", "j", 
-              "\[RightDoubleBracket]"}], "\[Conjugate]"}], "*", 
-            RowBox[{
-            "jpList", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], 
-            "*", 
-            RowBox[{
-            "jpList", "\[LeftDoubleBracket]", "j", 
-             "\[RightDoubleBracket]"}]}], "+", 
            RowBox[{
             RowBox[{
              RowBox[{
              "lambda", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}],
-              "\[LeftDoubleBracket]", "j", "\[RightDoubleBracket]"}], "*", 
-            RowBox[{
-            "jmList", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], 
-            "*", 
-            RowBox[{
-            "jmList", "\[LeftDoubleBracket]", "j", 
-             "\[RightDoubleBracket]"}]}]}], ")"}]}]}], ";"}], ",", 
-      RowBox[{"{", 
-       RowBox[{"i", ",", "3"}], "}"}], ",", 
-      RowBox[{"{", 
-       RowBox[{"j", ",", 
-        RowBox[{"i", "+", "1"}], ",", "4"}], "}"}]}], "]"}], ";"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"Do", "[", 
-     RowBox[{
-      RowBox[{
-       RowBox[{"X4Curnoe", "+=", 
-        RowBox[{
-         RowBox[{
-          RowBox[{"-", "1"}], "/", "6"}], "*", 
-         RowBox[{"(", 
+              "\[LeftDoubleBracket]", "j", "\[RightDoubleBracket]"}], 
+            "\[Conjugate]"}], "*", 
+           RowBox[{
+           "jpList", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], 
+           "*", 
+           RowBox[{
+           "jpList", "\[LeftDoubleBracket]", "j", "\[RightDoubleBracket]"}]}],
+           "+", 
           RowBox[{
            RowBox[{
             RowBox[{
-            "jpList", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], 
-            "*", 
-            RowBox[{
-            "jmList", "\[LeftDoubleBracket]", "j", 
-             "\[RightDoubleBracket]"}]}], "+", 
+            "lambda", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], 
+            "\[LeftDoubleBracket]", "j", "\[RightDoubleBracket]"}], "*", 
            RowBox[{
-            RowBox[{
-            "jmList", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], 
-            "*", 
-            RowBox[{
-            "jpList", "\[LeftDoubleBracket]", "j", 
-             "\[RightDoubleBracket]"}]}]}], ")"}]}]}], ";"}], ",", 
-      RowBox[{"{", 
-       RowBox[{"i", ",", "3"}], "}"}], ",", 
-      RowBox[{"{", 
-       RowBox[{"j", ",", 
-        RowBox[{"i", "+", "1"}], ",", "4"}], "}"}]}], "]"}], ";"}], 
+           "jmList", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], 
+           "*", 
+           RowBox[{
+           "jmList", "\[LeftDoubleBracket]", "j", 
+            "\[RightDoubleBracket]"}]}]}], ")"}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "3"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"j", ",", 
+         RowBox[{"i", "+", "1"}], ",", "4"}], "}"}]}], "]"}]}], ";"}], 
    "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"X4Curnoe", "=", 
+     RowBox[{"Sum", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "1"}], "/", "6"}], "*", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+           "jpList", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], 
+           "*", 
+           RowBox[{
+           "jmList", "\[LeftDoubleBracket]", "j", "\[RightDoubleBracket]"}]}],
+           "+", 
+          RowBox[{
+           RowBox[{
+           "jmList", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], 
+           "*", 
+           RowBox[{
+           "jpList", "\[LeftDoubleBracket]", "j", 
+            "\[RightDoubleBracket]"}]}]}], ")"}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "3"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"j", ",", 
+         RowBox[{"i", "+", "1"}], ",", "4"}], "}"}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"HexCurnoeEff", "=", 
+     RowBox[{"ExpandAll", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", "\[ScriptCapitalJ]", ")"}], "*", "X1Curnoe"}], "+", 
+       RowBox[{
+        RowBox[{"(", "\[ScriptCapitalJ]", ")"}], "*", "X2Curnoe"}], "+", 
+       RowBox[{
+        RowBox[{"(", "\[ScriptCapitalJ]", ")"}], "*", "X3Curnoe"}], "+", 
+       RowBox[{
+        RowBox[{"(", "\[ScriptCapitalJ]", ")"}], "*", "X4Curnoe"}]}], "]"}]}],
+     ";"}], "\[IndentingNewLine]", 
+   RowBox[{"HexCurnoe", "-", "HexCurnoeEff"}], "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"HddCurnoeEff", "=", 
      RowBox[{"ExpandAll", "[", 
@@ -582,21 +686,37 @@ Cell[BoxData[
    3.7995431489809504`*^9}, {3.7995439649836645`*^9, 3.799543969825741*^9}, {
    3.799544003868159*^9, 3.799544159630299*^9}, 3.799544230337462*^9, {
    3.799544272836932*^9, 3.7995442816172924`*^9}, {3.7995443131897793`*^9, 
-   3.7995444093441906`*^9}}],
+   3.7995444093441906`*^9}, 3.7999690012841387`*^9, {3.799969212632457*^9, 
+   3.7999692136225133`*^9}, {3.7999692439578967`*^9, 
+   3.7999693991924005`*^9}, {3.799969439942273*^9, 3.799969524825861*^9}}],
 
 Cell[BoxData["0"], "Output",
  CellChangeTimes->{
   3.7995439704897633`*^9, {3.7995440451790853`*^9, 3.7995441602321854`*^9}, 
    3.7995442314029217`*^9, {3.7995442823190665`*^9, 3.7995443058008175`*^9}, {
    3.7995443373204336`*^9, 3.799544377007998*^9}, {3.799544409823468*^9, 
-   3.799544417314916*^9}}]
+   3.799544417314916*^9}, {3.7999693340672174`*^9, 3.799969399572502*^9}, 
+   3.7999694932332277`*^9, 3.799969525417601*^9, 3.799969584715129*^9}],
+
+Cell[BoxData["0"], "Output",
+ CellChangeTimes->{
+  3.7995439704897633`*^9, {3.7995440451790853`*^9, 3.7995441602321854`*^9}, 
+   3.7995442314029217`*^9, {3.7995442823190665`*^9, 3.7995443058008175`*^9}, {
+   3.7995443373204336`*^9, 3.799544377007998*^9}, {3.799544409823468*^9, 
+   3.799544417314916*^9}, {3.7999693340672174`*^9, 3.799969399572502*^9}, 
+   3.7999694932332277`*^9, 3.799969525417601*^9, 3.7999695847449827`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{
-  RowBox[{"(*", " ", "Ross", " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{"Ross", " ", 
+    RowBox[{"doi", ":", " ", 
+     RowBox[{
+      RowBox[{"10.1103", "/", "PhysRevX"}], ".1", ".021002"}]}]}], "*)"}], 
+  "\[IndentingNewLine]", 
   RowBox[{
    RowBox[{
     RowBox[{"r1", "=", 
@@ -758,6 +878,96 @@ Cell[BoxData[
         RowBox[{"J3x", ",", "J3y", ",", "J3z"}], "}"}], ",", 
        RowBox[{"{", 
         RowBox[{"J4x", ",", "J4y", ",", "J4z"}], "}"}]}], "}"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"HexRoss", "=", 
+     RowBox[{"\[ScriptCapitalJ]", "*", 
+      RowBox[{"Sum", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"KroneckerDelta", "[", 
+          RowBox[{"\[Alpha]1", ",", "\[Beta]1"}], "]"}], "*", 
+         RowBox[{"u", "\[LeftDoubleBracket]", 
+          RowBox[{"a", ",", "\[Alpha]1", ",", "\[Alpha]2"}], 
+          "\[RightDoubleBracket]"}], "*", 
+         RowBox[{"u", "\[LeftDoubleBracket]", 
+          RowBox[{"b", ",", "\[Beta]1", ",", "\[Beta]2"}], 
+          "\[RightDoubleBracket]"}], "*", 
+         RowBox[{"Js", "\[LeftDoubleBracket]", 
+          RowBox[{"a", ",", "\[Alpha]2"}], "\[RightDoubleBracket]"}], "*", 
+         RowBox[{"Js", "\[LeftDoubleBracket]", 
+          RowBox[{"b", ",", "\[Beta]2"}], "\[RightDoubleBracket]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"a", ",", "3"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"b", ",", 
+          RowBox[{"a", "+", "1"}], ",", "4"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"\[Alpha]1", ",", "3"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"\[Alpha]2", ",", "3"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"\[Beta]1", ",", "3"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"\[Beta]2", ",", "3"}], "}"}]}], "]"}]}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"HexRoss", "=", 
+     RowBox[{"HexRoss", "/.", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"J1x", "\[Rule]", 
+         RowBox[{
+          RowBox[{"1", "/", "2"}], "*", 
+          RowBox[{"(", 
+           RowBox[{"J1p", "+", "J1m"}], ")"}]}]}], ",", 
+        RowBox[{"J2x", "\[Rule]", 
+         RowBox[{
+          RowBox[{"1", "/", "2"}], "*", 
+          RowBox[{"(", 
+           RowBox[{"J2p", "+", "J2m"}], ")"}]}]}], ",", 
+        RowBox[{"J3x", "\[Rule]", 
+         RowBox[{
+          RowBox[{"1", "/", "2"}], "*", 
+          RowBox[{"(", 
+           RowBox[{"J3p", "+", "J3m"}], ")"}]}]}], ",", 
+        RowBox[{"J4x", "\[Rule]", 
+         RowBox[{
+          RowBox[{"1", "/", "2"}], "*", 
+          RowBox[{"(", 
+           RowBox[{"J4p", "+", "J4m"}], ")"}]}]}], ",", 
+        RowBox[{"J1y", "\[Rule]", 
+         RowBox[{
+          RowBox[{"1", "/", 
+           RowBox[{"(", 
+            RowBox[{"2", "*", "I"}], ")"}]}], "*", 
+          RowBox[{"(", 
+           RowBox[{"J1p", "-", "J1m"}], ")"}]}]}], ",", 
+        RowBox[{"J2y", "\[Rule]", 
+         RowBox[{
+          RowBox[{"1", "/", 
+           RowBox[{"(", 
+            RowBox[{"2", "*", "I"}], ")"}]}], "*", 
+          RowBox[{"(", 
+           RowBox[{"J2p", "-", "J2m"}], ")"}]}]}], ",", 
+        RowBox[{"J3y", "\[Rule]", 
+         RowBox[{
+          RowBox[{"1", "/", 
+           RowBox[{"(", 
+            RowBox[{"2", "*", "I"}], ")"}]}], "*", 
+          RowBox[{"(", 
+           RowBox[{"J3p", "-", "J3m"}], ")"}]}]}], ",", 
+        RowBox[{"J4y", "\[Rule]", 
+         RowBox[{
+          RowBox[{"1", "/", 
+           RowBox[{"(", 
+            RowBox[{"2", "*", "I"}], ")"}]}], "*", 
+          RowBox[{"(", 
+           RowBox[{"J4p", "-", "J4m"}], ")"}]}]}]}], "}"}]}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"HexRoss", "=", 
+     RowBox[{"ExpandAll", "[", "HexRoss", "]"}]}], ";"}], 
    "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"HddRoss", "=", 
@@ -954,156 +1164,165 @@ Cell[BoxData[
           FontWeight->"Bold"], ",", "1", ",", "0"}], "}"}]}], "}"}]}], ";"}], 
    "\[IndentingNewLine]", "\[IndentingNewLine]", 
    RowBox[{
-    RowBox[{"Do", "[", 
-     RowBox[{
+    RowBox[{"X1Ross", "=", 
+     RowBox[{"Sum", "[", 
       RowBox[{
-       RowBox[{"X1Ross", "+=", 
+       RowBox[{
         RowBox[{
-         RowBox[{
-          RowBox[{"-", "1"}], "/", "3"}], "*", 
-         RowBox[{
-         "jzList", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], 
-         "*", 
-         RowBox[{
-         "jzList", "\[LeftDoubleBracket]", "j", "\[RightDoubleBracket]"}]}]}],
-        ";"}], ",", 
-      RowBox[{"{", 
-       RowBox[{"i", ",", "3"}], "}"}], ",", 
-      RowBox[{"{", 
-       RowBox[{"j", ",", 
-        RowBox[{"i", "+", "1"}], ",", "4"}], "}"}]}], "]"}], ";"}], 
+         RowBox[{"-", "1"}], "/", "3"}], "*", 
+        RowBox[{
+        "jzList", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], "*", 
+        RowBox[{
+        "jzList", "\[LeftDoubleBracket]", "j", "\[RightDoubleBracket]"}]}], 
+       ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "3"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"j", ",", 
+         RowBox[{"i", "+", "1"}], ",", "4"}], "}"}]}], "]"}]}], ";"}], 
    "\[IndentingNewLine]", 
    RowBox[{
-    RowBox[{"Do", "[", 
-     RowBox[{
+    RowBox[{"X2Ross", "=", 
+     RowBox[{"Sum", "[", 
       RowBox[{
-       RowBox[{"X2Ross", "+=", 
+       RowBox[{
         RowBox[{
+         RowBox[{"-", 
+          RowBox[{"\[Sqrt]", "2"}]}], "/", "3"}], "*", 
+        RowBox[{"(", 
          RowBox[{
-          RowBox[{"-", 
-           RowBox[{"\[Sqrt]", "2"}]}], "/", "3"}], "*", 
-         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+            "lambda", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], 
+            "\[LeftDoubleBracket]", "j", "\[RightDoubleBracket]"}], "*", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{
+              "jzList", "\[LeftDoubleBracket]", "i", 
+               "\[RightDoubleBracket]"}], "*", 
+              RowBox[{
+              "jpList", "\[LeftDoubleBracket]", "j", 
+               "\[RightDoubleBracket]"}]}], "+", 
+             RowBox[{
+              RowBox[{
+              "jpList", "\[LeftDoubleBracket]", "i", 
+               "\[RightDoubleBracket]"}], "*", 
+              RowBox[{
+              "jzList", "\[LeftDoubleBracket]", "j", 
+               "\[RightDoubleBracket]"}]}]}], ")"}]}], "+", 
           RowBox[{
            RowBox[{
             RowBox[{
              RowBox[{
              "lambda", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}],
-              "\[LeftDoubleBracket]", "j", "\[RightDoubleBracket]"}], "*", 
-            RowBox[{"(", 
-             RowBox[{
-              RowBox[{
-               RowBox[{
-               "jzList", "\[LeftDoubleBracket]", "i", 
-                "\[RightDoubleBracket]"}], "*", 
-               RowBox[{
-               "jpList", "\[LeftDoubleBracket]", "j", 
-                "\[RightDoubleBracket]"}]}], "+", 
-              RowBox[{
-               RowBox[{
-               "jpList", "\[LeftDoubleBracket]", "i", 
-                "\[RightDoubleBracket]"}], "*", 
-               RowBox[{
-               "jzList", "\[LeftDoubleBracket]", "j", 
-                "\[RightDoubleBracket]"}]}]}], ")"}]}], "+", 
-           RowBox[{
+              "\[LeftDoubleBracket]", "j", "\[RightDoubleBracket]"}], 
+            "\[Conjugate]"}], "*", 
+           RowBox[{"(", 
             RowBox[{
              RowBox[{
               RowBox[{
-              "lambda", "\[LeftDoubleBracket]", "i", 
-               "\[RightDoubleBracket]"}], "\[LeftDoubleBracket]", "j", 
-              "\[RightDoubleBracket]"}], "\[Conjugate]"}], "*", 
-            RowBox[{"(", 
+              "jzList", "\[LeftDoubleBracket]", "i", 
+               "\[RightDoubleBracket]"}], "*", 
+              RowBox[{
+              "jmList", "\[LeftDoubleBracket]", "j", 
+               "\[RightDoubleBracket]"}]}], "+", 
              RowBox[{
               RowBox[{
-               RowBox[{
-               "jzList", "\[LeftDoubleBracket]", "i", 
-                "\[RightDoubleBracket]"}], "*", 
-               RowBox[{
-               "jmList", "\[LeftDoubleBracket]", "j", 
-                "\[RightDoubleBracket]"}]}], "+", 
+              "jmList", "\[LeftDoubleBracket]", "i", 
+               "\[RightDoubleBracket]"}], "*", 
               RowBox[{
-               RowBox[{
-               "jmList", "\[LeftDoubleBracket]", "i", 
-                "\[RightDoubleBracket]"}], "*", 
-               RowBox[{
-               "jzList", "\[LeftDoubleBracket]", "j", 
-                "\[RightDoubleBracket]"}]}]}], ")"}]}]}], ")"}]}]}], ";"}], 
-      ",", 
-      RowBox[{"{", 
-       RowBox[{"i", ",", "3"}], "}"}], ",", 
-      RowBox[{"{", 
-       RowBox[{"j", ",", 
-        RowBox[{"i", "+", "1"}], ",", "4"}], "}"}]}], "]"}], ";"}], 
+              "jzList", "\[LeftDoubleBracket]", "j", 
+               "\[RightDoubleBracket]"}]}]}], ")"}]}]}], ")"}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "3"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"j", ",", 
+         RowBox[{"i", "+", "1"}], ",", "4"}], "}"}]}], "]"}]}], ";"}], 
    "\[IndentingNewLine]", 
    RowBox[{
-    RowBox[{"Do", "[", 
-     RowBox[{
+    RowBox[{"X3Ross", "=", 
+     RowBox[{"Sum", "[", 
       RowBox[{
-       RowBox[{"X3Ross", "+=", 
-        RowBox[{
-         RowBox[{"1", "/", "3"}], "*", 
-         RowBox[{"(", 
+       RowBox[{
+        RowBox[{"1", "/", "3"}], "*", 
+        RowBox[{"(", 
+         RowBox[{
           RowBox[{
-           RowBox[{
-            RowBox[{
-             RowBox[{
-              RowBox[{
-              "lambda", "\[LeftDoubleBracket]", "i", 
-               "\[RightDoubleBracket]"}], "\[LeftDoubleBracket]", "j", 
-              "\[RightDoubleBracket]"}], "\[Conjugate]"}], "*", 
-            RowBox[{
-            "jpList", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], 
-            "*", 
-            RowBox[{
-            "jpList", "\[LeftDoubleBracket]", "j", 
-             "\[RightDoubleBracket]"}]}], "+", 
            RowBox[{
             RowBox[{
              RowBox[{
              "lambda", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}],
-              "\[LeftDoubleBracket]", "j", "\[RightDoubleBracket]"}], "*", 
-            RowBox[{
-            "jmList", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], 
-            "*", 
-            RowBox[{
-            "jmList", "\[LeftDoubleBracket]", "j", 
-             "\[RightDoubleBracket]"}]}]}], ")"}]}]}], ";"}], ",", 
-      RowBox[{"{", 
-       RowBox[{"i", ",", "3"}], "}"}], ",", 
-      RowBox[{"{", 
-       RowBox[{"j", ",", 
-        RowBox[{"i", "+", "1"}], ",", "4"}], "}"}]}], "]"}], ";"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"Do", "[", 
-     RowBox[{
-      RowBox[{
-       RowBox[{"X4Ross", "+=", 
-        RowBox[{
-         RowBox[{
-          RowBox[{"-", "1"}], "/", "6"}], "*", 
-         RowBox[{"(", 
+              "\[LeftDoubleBracket]", "j", "\[RightDoubleBracket]"}], 
+            "\[Conjugate]"}], "*", 
+           RowBox[{
+           "jpList", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], 
+           "*", 
+           RowBox[{
+           "jpList", "\[LeftDoubleBracket]", "j", "\[RightDoubleBracket]"}]}],
+           "+", 
           RowBox[{
            RowBox[{
             RowBox[{
-            "jpList", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], 
-            "*", 
-            RowBox[{
-            "jmList", "\[LeftDoubleBracket]", "j", 
-             "\[RightDoubleBracket]"}]}], "+", 
+            "lambda", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], 
+            "\[LeftDoubleBracket]", "j", "\[RightDoubleBracket]"}], "*", 
            RowBox[{
-            RowBox[{
-            "jmList", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], 
-            "*", 
-            RowBox[{
-            "jpList", "\[LeftDoubleBracket]", "j", 
-             "\[RightDoubleBracket]"}]}]}], ")"}]}]}], ";"}], ",", 
-      RowBox[{"{", 
-       RowBox[{"i", ",", "3"}], "}"}], ",", 
-      RowBox[{"{", 
-       RowBox[{"j", ",", 
-        RowBox[{"i", "+", "1"}], ",", "4"}], "}"}]}], "]"}], ";"}], 
+           "jmList", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], 
+           "*", 
+           RowBox[{
+           "jmList", "\[LeftDoubleBracket]", "j", 
+            "\[RightDoubleBracket]"}]}]}], ")"}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "3"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"j", ",", 
+         RowBox[{"i", "+", "1"}], ",", "4"}], "}"}]}], "]"}]}], ";"}], 
    "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"X4Ross", "=", 
+     RowBox[{"Sum", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "1"}], "/", "6"}], "*", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+           "jpList", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], 
+           "*", 
+           RowBox[{
+           "jmList", "\[LeftDoubleBracket]", "j", "\[RightDoubleBracket]"}]}],
+           "+", 
+          RowBox[{
+           RowBox[{
+           "jmList", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], 
+           "*", 
+           RowBox[{
+           "jpList", "\[LeftDoubleBracket]", "j", 
+            "\[RightDoubleBracket]"}]}]}], ")"}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "3"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"j", ",", 
+         RowBox[{"i", "+", "1"}], ",", "4"}], "}"}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"HexRossEff", "=", 
+     RowBox[{"ExpandAll", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", "\[ScriptCapitalJ]", ")"}], "*", "X1Ross"}], "+", 
+       RowBox[{
+        RowBox[{"(", "\[ScriptCapitalJ]", ")"}], "*", "X2Ross"}], "+", 
+       RowBox[{
+        RowBox[{"(", "\[ScriptCapitalJ]", ")"}], "*", "X3Ross"}], "+", 
+       RowBox[{
+        RowBox[{"(", "\[ScriptCapitalJ]", ")"}], "*", "X4Ross"}]}], "]"}]}], 
+    ";"}], "\[IndentingNewLine]", 
+   RowBox[{"ExpandAll", "[", 
+    RowBox[{"HexRoss", "-", "HexRossEff"}], "]"}], "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"HddRossEff", "=", 
      RowBox[{"ExpandAll", "[", 
@@ -1136,7 +1355,8 @@ Cell[BoxData[
   3.7995436554596577`*^9, 3.799543656584551*^9}, {3.799543721728537*^9, 
   3.799543796538267*^9}, {3.7995438566854177`*^9, 3.799543859130965*^9}, {
   3.7995438937774353`*^9, 3.799543957427822*^9}, {3.799544054419959*^9, 
-  3.7995440587691145`*^9}}],
+  3.7995440587691145`*^9}, {3.799969230882435*^9, 3.799969232017705*^9}, {
+  3.7999695895049767`*^9, 3.799969730174861*^9}}],
 
 Cell[BoxData["0"], "Output",
  CellChangeTimes->{{3.7995431560175853`*^9, 3.7995431631919346`*^9}, {
@@ -1145,7 +1365,18 @@ Cell[BoxData["0"], "Output",
    3.7995436651539707`*^9, 3.799543705599017*^9}, {3.799543760134062*^9, 
    3.7995437970547915`*^9}, {3.7995438327844973`*^9, 
    3.7995438599958453`*^9}, {3.799543899613844*^9, 3.799543958114069*^9}, {
-   3.7995440567480955`*^9, 3.799544060960173*^9}, 3.799544302924481*^9}]
+   3.7995440567480955`*^9, 3.799544060960173*^9}, 3.799544302924481*^9, 
+   3.799969624545274*^9, 3.7999696767300425`*^9, 3.7999697311347113`*^9}],
+
+Cell[BoxData["0"], "Output",
+ CellChangeTimes->{{3.7995431560175853`*^9, 3.7995431631919346`*^9}, {
+   3.7995432962569723`*^9, 3.7995433018420076`*^9}, {3.7995434429967184`*^9, 
+   3.799543480468443*^9}, {3.799543515861496*^9, 3.799543532663019*^9}, {
+   3.7995436651539707`*^9, 3.799543705599017*^9}, {3.799543760134062*^9, 
+   3.7995437970547915`*^9}, {3.7995438327844973`*^9, 
+   3.7995438599958453`*^9}, {3.799543899613844*^9, 3.799543958114069*^9}, {
+   3.7995440567480955`*^9, 3.799544060960173*^9}, 3.799544302924481*^9, 
+   3.799969624545274*^9, 3.7999696767300425`*^9, 3.7999697311580343`*^9}]
 }, Open  ]]
 },
 WindowSize->{1349, 685},
@@ -1165,14 +1396,16 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 368, 8, 33, "Input"],
+Cell[558, 20, 446, 9, 33, "Input"],
 Cell[CellGroupData[{
-Cell[951, 32, 19452, 552, 1032, "Input"],
-Cell[20406, 586, 305, 5, 33, "Output"]
+Cell[1029, 33, 23408, 657, 1186, "Input"],
+Cell[24440, 692, 425, 6, 33, "Output"],
+Cell[24868, 700, 427, 6, 33, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[20748, 596, 18483, 542, 1064, "Input"],
-Cell[39234, 1140, 528, 7, 33, "Output"]
+Cell[25332, 711, 22378, 647, 1218, "Input"],
+Cell[47713, 1360, 602, 8, 33, "Output"],
+Cell[48318, 1370, 602, 8, 33, "Output"]
 }, Open  ]]
 }
 ]
