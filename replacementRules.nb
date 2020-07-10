@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    156186,       3969]
-NotebookOptionsPosition[    155878,       3954]
-NotebookOutlinePosition[    156255,       3970]
-CellTagsIndexPosition[    156212,       3967]
+NotebookDataLength[    156253,       3971]
+NotebookOptionsPosition[    155945,       3956]
+NotebookOutlinePosition[    156322,       3972]
+CellTagsIndexPosition[    156279,       3969]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1570,57 +1570,58 @@ Cell[BoxData[{
         RowBox[{"O2n2", "[", "1", "]"}], "**", "Q1", "**", 
         RowBox[{"O21", "[", "1", "]"}], "**", "P1"}], "\[Rule]", 
        RowBox[{
-        RowBox[{"-", "\[ImaginaryI]"}], "*", 
-        RowBox[{"j7", "^", "2"}], "*", "\[Sigma]1z"}]}], ",", 
-      "\[IndentingNewLine]", "\t\t\t", 
+        RowBox[{"-", "\[ImaginaryI]"}], "*", "j5", "*", "j7", "*", 
+        "\[Sigma]1z"}]}], ",", "\[IndentingNewLine]", "\t\t\t", 
       RowBox[{
        RowBox[{"P2", "**", 
         RowBox[{"O2n2", "[", "2", "]"}], "**", "Q2", "**", 
         RowBox[{"O21", "[", "2", "]"}], "**", "P2"}], "\[Rule]", 
        RowBox[{
-        RowBox[{"-", "\[ImaginaryI]"}], "*", 
-        RowBox[{"j7", "^", "2"}], "*", "\[Sigma]2z"}]}], ",", 
-      "\[IndentingNewLine]", "\t\t\t", 
+        RowBox[{"-", "\[ImaginaryI]"}], "*", "j5", "*", "j7", "*", 
+        "\[Sigma]2z"}]}], ",", "\[IndentingNewLine]", "\t\t\t", 
       RowBox[{
        RowBox[{"P3", "**", 
         RowBox[{"O2n2", "[", "3", "]"}], "**", "Q3", "**", 
         RowBox[{"O21", "[", "3", "]"}], "**", "P3"}], "\[Rule]", 
        RowBox[{
-        RowBox[{"-", "\[ImaginaryI]"}], "*", 
-        RowBox[{"j7", "^", "2"}], "*", "\[Sigma]3z"}]}], ",", 
-      "\[IndentingNewLine]", "\t\t\t", 
+        RowBox[{"-", "\[ImaginaryI]"}], "*", "j5", "*", "j7", "*", 
+        "\[Sigma]3z"}]}], ",", "\[IndentingNewLine]", "\t\t\t", 
       RowBox[{
        RowBox[{"P4", "**", 
         RowBox[{"O2n2", "[", "4", "]"}], "**", "Q4", "**", 
         RowBox[{"O21", "[", "4", "]"}], "**", "P4"}], "\[Rule]", 
        RowBox[{
-        RowBox[{"-", "\[ImaginaryI]"}], "*", 
-        RowBox[{"j7", "^", "2"}], "*", "\[Sigma]4z"}]}], ",", 
-      "\[IndentingNewLine]", "\[IndentingNewLine]", "\t\t\t", 
+        RowBox[{"-", "\[ImaginaryI]"}], "*", "j5", "*", "j7", "*", 
+        "\[Sigma]4z"}]}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+      "\t\t\t", 
       RowBox[{
        RowBox[{"P1", "**", 
         RowBox[{"O2n2", "[", "1", "]"}], "**", "Q1", "**", 
         RowBox[{"O22", "[", "1", "]"}], "**", "P1"}], "\[Rule]", 
-       RowBox[{"\[ImaginaryI]", "*", "j5", "*", "j7", "*", "\[Sigma]1z"}]}], 
-      ",", "\[IndentingNewLine]", "\t\t\t", 
+       RowBox[{"\[ImaginaryI]", "*", 
+        RowBox[{"j5", "^", "2"}], "*", "\[Sigma]1z"}]}], ",", 
+      "\[IndentingNewLine]", "\t\t\t", 
       RowBox[{
        RowBox[{"P2", "**", 
         RowBox[{"O2n2", "[", "2", "]"}], "**", "Q2", "**", 
         RowBox[{"O22", "[", "2", "]"}], "**", "P2"}], "\[Rule]", 
-       RowBox[{"\[ImaginaryI]", "*", "j5", "*", "j7", "*", "\[Sigma]2z"}]}], 
-      ",", "\[IndentingNewLine]", "\t\t\t", 
+       RowBox[{"\[ImaginaryI]", "*", 
+        RowBox[{"j5", "^", "2"}], "*", "\[Sigma]2z"}]}], ",", 
+      "\[IndentingNewLine]", "\t\t\t", 
       RowBox[{
        RowBox[{"P3", "**", 
         RowBox[{"O2n2", "[", "3", "]"}], "**", "Q3", "**", 
         RowBox[{"O22", "[", "3", "]"}], "**", "P3"}], "\[Rule]", 
-       RowBox[{"\[ImaginaryI]", "*", "j5", "*", "j7", "*", "\[Sigma]3z"}]}], 
-      ",", "\[IndentingNewLine]", "\t\t\t", 
+       RowBox[{"\[ImaginaryI]", "*", 
+        RowBox[{"j5", "^", "2"}], "*", "\[Sigma]3z"}]}], ",", 
+      "\[IndentingNewLine]", "\t\t\t", 
       RowBox[{
        RowBox[{"P4", "**", 
         RowBox[{"O2n2", "[", "4", "]"}], "**", "Q4", "**", 
         RowBox[{"O22", "[", "4", "]"}], "**", "P4"}], "\[Rule]", 
-       RowBox[{"\[ImaginaryI]", "*", "j5", "*", "j7", "*", "\[Sigma]4z"}]}], 
-      ",", "\[IndentingNewLine]", "\[IndentingNewLine]", "\t\t\t", 
+       RowBox[{"\[ImaginaryI]", "*", 
+        RowBox[{"j5", "^", "2"}], "*", "\[Sigma]4z"}]}], ",", 
+      "\[IndentingNewLine]", "\[IndentingNewLine]", "\t\t\t", 
       RowBox[{
        RowBox[{"P1", "**", 
         RowBox[{"O2n1", "[", "1", "]"}], "**", "Q1", "**", 
@@ -3950,9 +3951,10 @@ Cell[BoxData[{
    3.802294007946526*^9, 3.8022940440564384`*^9}, {3.8022941298666043`*^9, 
    3.8022941505461893`*^9}, {3.8022945326062307`*^9, 3.802294599355908*^9}, {
    3.802294869300291*^9, 3.8022951531002283`*^9}, {3.8022951910497494`*^9, 
-   3.802295283629776*^9}, {3.8026579033630056`*^9, 3.8026579910671964`*^9}}]
+   3.802295283629776*^9}, {3.8026579033630056`*^9, 3.8026579910671964`*^9}, {
+   3.8029638832296886`*^9, 3.802963922377409*^9}}]
 },
-WindowSize->{968, 676},
+WindowSize->{801, 676},
 WindowMargins->{{-7, Automatic}, {Automatic, 0}},
 Magnification:>1.25 Inherited,
 FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
@@ -3969,7 +3971,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 155316, 3932, 18451, "Input",
+Cell[558, 20, 155383, 3934, 20270, "Input",
  InitializationCell->True]
 }
 ]
